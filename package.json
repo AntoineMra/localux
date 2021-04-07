@@ -1,0 +1,19 @@
+{
+  "name": "localux",
+  "version": "1.0.0",
+  "description": "Rest API Localux",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AntoineMra/localux.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AntoineMra/localux/issues"
+  },
+  "homepage": "https://github.com/AntoineMra/localux#readme"
+}
