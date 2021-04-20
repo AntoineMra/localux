@@ -10,8 +10,6 @@ var corsOptions = {
   origin: "http://localhost:7000"
 };
 
-
-
 app.use(cors(corsOptions));
 
 // parse requests of content-type - application/json
@@ -20,8 +18,12 @@ app.use(bodyParser.json());
 // parse requests of content-type - application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: true }));
 
+
+
 // simple route
 app.get('/' , (req,res) => {
-      res.json({ message: "Welcome to bezkoder application." });
-        res.send('Test passed')});
+        res.json({ message: "Welcome to bezkoder application." });
+        res.send('Test passed')
+      });
 
+require("./routes/appRoute")(app);
