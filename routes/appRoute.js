@@ -8,4 +8,5 @@ module.exports = app => {
     router.get("/loc/:datePrev/:heurePrev/:dateLoc",Loc.addLocation);
     router.get("/vehicule/:date",Vehic.findVehicChauffByDate);
 
+    app.use('/api',router)
 }
