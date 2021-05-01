@@ -3,17 +3,10 @@ const { sequelize } = require("../models/index");
 const Location = require("../models/location")(sequelize,DataTypes);
 
 
+
 exports.addLocation = (req, res) => {
   const montant = 20;
   const locaType = 'avec chauffeur';
-  // Validation
-
-  if (!req.param("clientID")) {
-    res.status(400).send({
-      message: "Content can not be empty!"
-    });
-    return;
-  }
 
   const location = {
     le_vehicule_id: req.param("vehiculeID"),
@@ -27,7 +20,6 @@ exports.addLocation = (req, res) => {
 
   Location.create(location)
     .then(data => {
-      console.log(data);
       res.send(data);
     })
     .catch(err => {
@@ -37,7 +29,3 @@ exports.addLocation = (req, res) => {
       });
     });
 };
-
-exports.getLocationsChauff = (date) => {
-    
-}
