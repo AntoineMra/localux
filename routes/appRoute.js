@@ -9,3 +9,4 @@ module.exports = app => {
     router.get("/vehicule/:date",Vehicule.getVehiculeChauff);
     app.use('/api',router)
 }
+
